@@ -11,13 +11,10 @@ body{
 }
 
 
-
-
 /* P1 - Seamless reader
  * ======================================================= */
 
-
-.container.features{
+ .container.features{
   padding: 100px 0;
 }
 
@@ -90,8 +87,8 @@ body{
       background-color:#ffc31c;
       color:black;
       .lyric-caret{
-      color:black;
-      background-color:#ffc31c;
+        color:black;
+        background-color:#ffc31c;
       }
     }
 
@@ -181,45 +178,171 @@ body{
 /* P2 - Activity Module
  * ======================================================= */
 
+
+ .container.p2{
+  width: 480px;
+  margin: 190px 100px 200px 460px;
+  position: relative;
+}
+
 .activity-module{
-  position:absolute;
+  position:relative;
+  border:1px solid #05aae5;
+  background-color:rgb(30, 30, 30);
+
   h4{
-    color:#05aae5;
+    background-color:#111;
+    color:#888;
     text-transform: uppercase;
-    font-size:14px;
+    font-size:12px;
+    padding:8px 10px 4px 10px;
+    line-height: 12px;
+    margin:0;
+    font-weight:normal;
+
   }
 
   ul{
     padding:0;
     margin:0;
+    border-top:1px solid rgb(30, 30, 30);
 
     li{
-      width:300px;
+      width:100%;
       height:50px;
-      background-color:#111;
-      margin:2px;
+      background-color:#000;
+      padding: 2px 0;
+      margin:1px 0;
       list-style:none;
-      border-bottom:1px solid #333;
+      transition: background-color 150ms linear;
+
 
       img{
         width:50px;
         height:50px;
         float:left;
-      }
-      .title{
-        color:#05aae5;
-        width:250px;
-        float:left;
+        margin-left:5px;
+        display: none;
       }
 
+      .title{
+        color:#05aae5;
+        float:left;
+        padding: 5px 10px 2px;
+        font-size:15px;
+      }
+
+      &:hover{
+        background-color:rgb(15, 15, 15);
+
+        .song_metadata{
+          opacity: 1;
+        }
+      }
     }
   }
 }
 
+.song_metadata{
+  transition: opacity 150ms linear;
+  clear:both;
+  float:right;
 
+  > div {
+    transition: opacity 500ms ease-out;
+    opacity: 0.3;
+  }
+}
+
+.metadata .metadata_element, .song_metadata .metadata_element, .postlet_unit .postlet_infobar .metadata_element {
+  text-indent: 14px;
+  float: left;
+  margin-right: 16px;
+  height: 18px;
+  font-size:12px;
+
+}
+
+
+.metadata .song_views, .song_metadata .song_views, .postlet_unit .postlet_infobar .song_views {
+  position: relative;
+  color: #dfc7ff;
+  border-bottom: 0px dotted #750cfd;
+  text-indent: 19px;
+  line-height: 18px;
+  margin-top:1px;
+}
+.metadata .annotation_count, .song_metadata .annotation_count, .postlet_unit .postlet_infobar .annotation_count {
+  position: relative;
+  color: #ffe7a6;
+  border-bottom: 0px dotted #e8ab00;
+  text-indent: 15px;
+}
+.metadata .verified_count, .song_metadata .verified_count, .postlet_unit .postlet_infobar .verified_count {
+  position: relative;
+  color: #c2e8a4;
+  border-bottom: 0px dotted #61a52a;
+  text-indent: 12px;
+  border-bottom: 1px dotted #497c20;
+}
+.metadata .unreviewed_count, .song_metadata .unreviewed_count, .postlet_unit .postlet_infobar .unreviewed_count {
+  position: relative;
+  color: #ff8ba3;
+  border-bottom: 0px dotted #cc012b;
+}
+.metadata .unreviewed_count:before, .song_metadata .unreviewed_count:before, .postlet_unit .postlet_infobar .unreviewed_count:before {
+  content: "";
+  float: left;
+  background: url('http://assets.rapgenius.com/images/redesign/sprite.png?1376070268') 0px -184px no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -1px;
+  top: 3px;
+}
+.metadata .verified_count:before, .song_metadata .verified_count:before, .postlet_unit .postlet_infobar .verified_count:before {
+  content: "";
+  float: left;
+  background: url('http://assets.rapgenius.com/images/redesign/sprite.png?1376070268') no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -1px;
+  top: 3px;
+}
+.metadata .annotation_count:before, .song_metadata .annotation_count:before, .postlet_unit .postlet_infobar .annotation_count:before {
+  content: "";
+  float: left;
+  background: url('http://assets.rapgenius.com/images/redesign/sprite.png?1376070268') 0px -121px no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -1px;
+  top: 3px;
+}
+.metadata .song_views:before, .song_metadata .song_views:before, .postlet_unit .postlet_infobar .song_views:before {
+  content: "";
+  float: left;
+  background: url('http://assets.rapgenius.com/images/redesign/sprite.png?1376070268') 0px -61px no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -1px;
+  top: 3px;
+}
 
 .rg-bg{
   background-image:url(../images/rg-bg.jpg);
+  background-position:0px 116px;
+  background-repeat: no-repeat;
+}
 
+.annotation_count, .verified_count, .unreviewed_count{
+  // display: none;
+}
+
+.flash{
+  transition: opacity 100ms linear;
+  opacity: 1!important;
 }
 
