@@ -1,0 +1,225 @@
+$iconSpritePath: "../images/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+
+@import 'sass-bootstrap/lib/bootstrap';
+
+body{
+	background-color:#000;
+  color: #fff;
+  padding:0;
+  margin:0;
+}
+
+
+
+
+/* P1 - Seamless reader
+ * ======================================================= */
+
+
+.container.features{
+  padding: 100px 0;
+}
+
+.brief{
+  h4{
+    margin:0;
+    padding:0;
+    color:#aaa;
+  }
+  background-color:#111;
+  padding:10px 0 10px 10px;
+  color:#888;
+  padding-left:100px;
+  border-bottom: 1px solid #333;
+  p{
+    margin-bottom:0;
+    margin: 10px 0px 5px;
+  }
+}
+
+.logo{
+  background-image:url(../images/logo.png);
+  width:334px;
+  height:74px;
+  background-size:334px 74px;
+  margin:50px 0;
+}
+
+.container{
+	width:600px;
+	margin: 0 auto;
+	margin: 0 100px 200px 100px;
+
+}
+
+.features{
+	h1{
+		margin-bottom:30px;
+	}
+
+	li{
+		list-style:none;
+		line-height: 28px;
+		a{
+			transition: color 200ms linear;
+			font-size:22px;
+			text-decoration: none;
+			&:hover{
+				color:#23c1fa;
+			}
+		}
+		&.disabled{
+			opacity: 0.3;
+		}
+	}
+
+}
+
+.lyrics{
+	padding: 20px;
+	border: 1px solid #333;
+	background: #161616;
+	line-height:26px;
+	font-size:18px;
+	a{
+		color:#ffc31c;
+		text-decoration: none;
+
+    &.highlight, &:hover{
+      background-color:#ffc31c;
+      color:black;
+      .lyric-caret{
+      color:black;
+      background-color:#ffc31c;
+      }
+    }
+
+    .lyric-caret{
+      opacity: 0.7;
+      position: absolute;
+      right:-26px;
+      color:#aaa;
+      font-size:11px;
+      font-weight:bold;
+      text-align: center;
+      margin-top:0px;
+      text-decoration: none;
+      background-color:#222;
+      width:26px;
+      height:22px;
+      line-height:22px;
+    }
+  }
+}
+
+.lyrics-container{
+  position: relative;
+}
+
+.definitions-container{
+  width:400px;
+  height:100%;
+  position: fixed;
+  top:0;
+  left:750px;
+  color:#aaa;
+
+}
+
+#definitions_line{
+  position: absolute;
+  height:3px;
+  width:90px;
+  background-color:#333;
+  top:150px;
+  left:680px;
+  z-index: 99;
+  display: block;
+  transition: all 100ms linear;
+  opacity: 0;
+}
+
+.definition{
+  padding: 10px 20px;
+  position: absolute;
+  top:200px;
+  width:90%;
+  left:5%;
+  background-color:#111;
+  border: 1px solid #222;
+  opacity: 0;
+  transition: all 200ms linear;
+  text-align: center;
+  img{
+    margin:10px auto;
+  }
+
+  p{
+    text-align: left;
+    font-size:14px;
+    line-height:18px;
+    clear:both;
+    margin:10px 0px;
+
+    &:first-child{
+    }
+  }
+
+  &.show{
+    opacity: 1;
+  }
+}
+
+.multi-def{
+
+}
+
+
+
+
+/* P2 - Activity Module
+ * ======================================================= */
+
+.activity-module{
+  position:absolute;
+  h4{
+    color:#05aae5;
+    text-transform: uppercase;
+    font-size:14px;
+  }
+
+  ul{
+    padding:0;
+    margin:0;
+
+    li{
+      width:300px;
+      height:50px;
+      background-color:#111;
+      margin:2px;
+      list-style:none;
+      border-bottom:1px solid #333;
+
+      img{
+        width:50px;
+        height:50px;
+        float:left;
+      }
+      .title{
+        color:#05aae5;
+        width:250px;
+        float:left;
+      }
+
+    }
+  }
+}
+
+
+
+.rg-bg{
+  background-image:url(../images/rg-bg.jpg);
+
+}
+
