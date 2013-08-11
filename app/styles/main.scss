@@ -10,7 +10,6 @@ body{
   margin:0;
 }
 
-
 /* P1 - Seamless reader
  * ======================================================= */
 
@@ -47,7 +46,6 @@ body{
 	width:600px;
 	margin: 0 auto;
 	margin: 0 100px 200px 100px;
-
 }
 
 .features{
@@ -173,11 +171,8 @@ body{
 }
 
 
-
-
 /* P2 - Activity Module
  * ======================================================= */
-
 
  .container.p2{
   width: 480px;
@@ -189,6 +184,7 @@ body{
   position:relative;
   border:1px solid #05aae5;
   background-color:rgb(30, 30, 30);
+  height:355px;
 
   h4{
     background-color:#111;
@@ -199,7 +195,6 @@ body{
     line-height: 12px;
     margin:0;
     font-weight:normal;
-
   }
 
   ul{
@@ -214,8 +209,7 @@ body{
       padding: 2px 0;
       margin:1px 0;
       list-style:none;
-      transition: background-color 150ms linear;
-
+      transition: background-color 150ms linear, top 1000ms linear;
 
       img{
         width:50px;
